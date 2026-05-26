@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+
+<robot name="gp7wc" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!-- Robot + Table -->
+    <xacro:include filename="$(find aims_gp7wc_support)/urdf/gp7wc_macro.xacro" />
+    <xacro:gp7wc prefix=""/>
+
+</robot>

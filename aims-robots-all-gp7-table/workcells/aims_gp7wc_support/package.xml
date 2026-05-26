@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>aims_gp7wc_support</name>
+  <version>1.0.0</version>
+  <description>
+    <p>
+        OSU AIMS support for Automate 2026 workcell Forging demo (gp7wc)
+    </p>
+    <p>
+        This package contains physical configuration data and launch files
+        for the Automate 2026 workcell demo at the AIMS Lab @ Ohio State.
+    </p>
+    <p>
+      <b>Specifications</b>
+    </p>
+    <ul>
+      <li>GP7   - Default</li>
+    </ul>
+    <p>
+        All urdfs are based on emperically measured locations provided by acbuynak and ssmith.
+    </p>
+    <p>
+        Before using any of the configuration files and / or meshes included
+        in this package, be sure to check they are correct for the particular
+        robot model(s) and configuration you intend to use them with.
+    </p>
+  </description>
+  <author>Samantha Smith</author>
+  <maintainer email="smith.15485@osu.edu">Samantha Smith (AIMS Lab @ The Ohio State University)</maintainer>
+  <maintainer email="buynak.9@osu.edu">A.C. Buynak (AIMS Lab @ The Ohio State University)</maintainer>
+  <license>Apache 2.0</license>
+
+  <url type="website">http://cdme.osu.edu/aims-lab</url>
+  <url type="bugtracker">https://github.com/osu-aims/aims-robots-all/issues-</url>
+  <url type="repository">https://github.com/osu-aims/aims-robots-all</url>
+
+    <buildtool_depend>ament_cmake</buildtool_depend>
+
+    <exec_depend>motoman_gp7_support</exec_depend>
+    <exec_depend>joint_state_publisher</exec_depend>
+    <exec_depend>robot_state_publisher</exec_depend>
+    <exec_depend>rviz2</exec_depend>
+    <exec_depend>xacro</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+    <!-- <architecture_independent/> -->
+  </export>
+</package>

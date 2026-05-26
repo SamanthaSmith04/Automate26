@@ -1,2 +1,1 @@
-# Automate26
-# Automate26
+# Automate 2026 Forging Workcell Demo

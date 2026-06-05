@@ -93,7 +93,7 @@
             <geometry>
                 <mesh filename="package://motoman_gp7_support/meshes/collision/gp7_link_6_t.stl"/>
             </geometry>
-        </collision>
+        </collision>0 0 0
     </link>
     <link name="${prefix}tool0"/>
     <link name="${prefix}flange"/>
@@ -159,9 +159,50 @@
     <joint name="${prefix}base_link-base" type="fixed">
         <origin xyz="0 0 0.330" rpy="0 0 0"/>
         <parent link="${prefix}base_link"/>
-        <child link="${prefix}base"/>
+        <child link="${prefix}base"/>   
     </joint>
 
+    <material name="grey">
+        <color rgba="0.9 0.9 0.9 1"/>
+    </material>
+
+     <material name="dark grey">
+        <color rgba="0.4 0.4 0.4 1"/>
+    </material>
+
+    <link name="cart">
+        <visual>
+        <geometry>
+            <box size="1.21 0.621 0.74"/>
+        </geometry>
+        <material name="grey"/>
+        <origin rpy="0 0 0" xyz="0 0 .37"/>
+        </visual>
+    </link>
+    <joint name="cart_to_base" type="fixed">
+        <parent link="cart"/>
+        <child link="base_link"/>
+        <origin xyz="-.4035 0 .74"/>
+    </joint>
+
+    <link name="press">
+        <visual>
+            <geometry>
+                <mesh filename="package://aims_gp7wc_support/meshes/press_model.STL"/>
+            </geometry>
+            <material name="dark grey"/>
+            <origin rpy="${radians(90)} 0 -${radians(90)}" xyz="0 0 0"/>
+        </visual>
+    </link>
+
+     <joint name="press_to_cart" type="fixed">
+        <parent link="cart"/>
+        <child link="press"/>
+        <origin xyz=".143 .1505 .74"/>
+    </joint>
+
+
     </xacro:macro>
+
 </robot>
 

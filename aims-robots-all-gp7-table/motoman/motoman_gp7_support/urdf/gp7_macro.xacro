@@ -93,7 +93,7 @@
             <geometry>
                 <mesh filename="package://motoman_gp7_support/meshes/collision/gp7_link_6_t.stl"/>
             </geometry>
-        </collision>0 0 0
+        </collision>
     </link>
     <link name="${prefix}tool0"/>
     <link name="${prefix}flange"/>
@@ -176,13 +176,13 @@
             <box size="1.21 0.621 0.74"/>
         </geometry>
         <material name="grey"/>
-        <origin rpy="0 0 0" xyz="0 0 .37"/>
+        <origin rpy="0 0 0" xyz="0 0 0.37"/>
         </visual>
     </link>
     <joint name="cart_to_base" type="fixed">
         <parent link="cart"/>
         <child link="base_link"/>
-        <origin xyz="-.4035 0 .74"/>
+        <origin xyz="-0.4035 0 0.74"/>
     </joint>
 
     <link name="press">
@@ -198,7 +198,7 @@
      <joint name="press_to_cart" type="fixed">
         <parent link="cart"/>
         <child link="press"/>
-        <origin xyz=".143 .1505 .74"/>
+        <origin xyz="0.143 0.1505 0.74"/>
     </joint>
 
 
